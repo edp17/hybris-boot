@@ -1146,11 +1146,38 @@ case "$DEVICE" in
 
     "i9305" | "encore" | "n7000" | "n7100" | "i9300" | "anzu" | \
     "coconut" | "haida" | "hallon" | "iyokan" | "mango" | "phoenix" | \
-    "satsuma" | "smultron" | "urushi" | "zeus" | "jenad")
+    "satsuma" | "smultron" | "urushi" | "zeus" | "jenad" )
     # Untested for other revisions of Samsung GT-S6500:
     # | "jena" | "trebon")
         sed -i \
             -e 's /block/ / ' \
+            "$@"
+        ;;
+
+    "treltexx" )
+    # For Samsung Galaxy Note 4 (SM-N910C):
+        sed -i \
+            -e 's block/platform/15540000.dwmmc0/by-name/BOOT mmcblk0p9 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/BOTA0 mmcblk0p1 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/BOTA1 mmcblk0p2 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/CACHE mmcblk0p19 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/CARRIER mmcblk0p7 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/CDMA-RADIO mmcblk0p12 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/DNT mmcblk0p15 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/EFS mmcblk0p3 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/HIDDEN mmcblk0p20 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/OTA mmcblk0p11 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/PARAM mmcblk0p8 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/PERSDATA mmcblk0p16 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/RADIO mmcblk0p13 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/RECOVERY mmcblk0p10 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/RESERVED2 mmcblk0p17 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/SYSTEM mmcblk0p18 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/TOMBSTONES mmcblk0p14 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/USERDATA mmcblk0p21 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/m9kefs1 mmcblk0p4 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/m9kefs2 mmcblk0p5 ' \
+            -e 's block/platform/15540000.dwmmc0/by-name/m9kefs3 mmcblk0p6 ' \
             "$@"
         ;;
 
