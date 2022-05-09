@@ -1175,7 +1175,7 @@ case "$DEVICE" in
             "$@"
         ;;
 
-    "jfltexx" )
+    "jflte" | "jfltexx" )
     # For Samsung Galaxy S4 (GT-i9505):
         sed -i \
             -e 's block/platform/msm_sdcc.1/by-name/aboot mmcblk0p6 ' \
