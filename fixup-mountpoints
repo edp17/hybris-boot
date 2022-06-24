@@ -1105,11 +1105,37 @@ case "$DEVICE" in
         ;;
 
     "hammerhead")
+    # For Nexus 5 - Los14.1:
         sed -i \
-            -e 's block/platform/msm_sdcc.1/by-name/modem mmcblk0p1 ' \
-            -e 's block/platform/msm_sdcc.1/by-name/persist mmcblk0p16 ' \
-            -e 's block/platform/msm_sdcc.1/by-name/system mmcblk0p25 ' \
-            -e 's block/platform/msm_sdcc.1/by-name/userdata mmcblk0p28 ' \
+            -e 's block/bootdevice/by-name/DDR mmcblk0p24 ' \
+            -e 's block/bootdevice/by-name/aboot mmcblk0p6 ' \
+            -e 's block/bootdevice/by-name/abootb mmcblk0p11 ' \
+            -e 's block/bootdevice/by-name/boot mmcblk0p19 ' \
+            -e 's block/bootdevice/by-name/cache mmcblk0p27 ' \
+            -e 's block/bootdevice/by-name/crypto mmcblk0p26 ' \
+            -e 's block/bootdevice/by-name/fsc mmcblk0p22 ' \
+            -e 's block/bootdevice/by-name/fsg mmcblk0p21 ' \
+            -e 's block/bootdevice/by-name/grow mmcblk0p29 ' \
+            -e 's block/bootdevice/by-name/imgdata mmcblk0p17 ' \
+            -e 's block/bootdevice/by-name/laf mmcblk0p18 ' \
+            -e 's block/bootdevice/by-name/metadata mmcblk0p14 ' \
+            -e 's block/bootdevice/by-name/misc mmcblk0p15 ' \
+            -e 's block/bootdevice/by-name/modem mmcblk0p1 ' \
+            -e 's block/bootdevice/by-name/modemst1 mmcblk0p12 ' \
+            -e 's block/bootdevice/by-name/modemst2 mmcblk0p13 ' \
+            -e 's block/bootdevice/by-name/pad mmcblk0p7 ' \
+            -e 's block/bootdevice/by-name/persist mmcblk0p16 ' \
+            -e 's block/bootdevice/by-name/recovery mmcblk0p20 ' \
+            -e 's block/bootdevice/by-name/rpm mmcblk0p3 ' \
+            -e 's block/bootdevice/by-name/rpmb mmcblk0p10 ' \
+            -e 's block/bootdevice/by-name/sbl1 mmcblk0p2 ' \
+            -e 's block/bootdevice/by-name/sbl1b mmcblk0p8 ' \
+            -e 's block/bootdevice/by-name/sdi mmcblk0p5 ' \
+            -e 's block/bootdevice/by-name/ssd mmcblk0p23 ' \
+            -e 's block/bootdevice/by-name/system mmcblk0p25 ' \
+            -e 's block/bootdevice/by-name/tz mmcblk0p4 ' \
+            -e 's block/bootdevice/by-name/tzb mmcblk0p9 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk0p28 ' \
             "$@"
         ;;
 
