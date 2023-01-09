@@ -888,6 +888,57 @@ case "$DEVICE" in
             "$@"
         ;;
 
+    "ocean" )
+    # For Motorola G7 Power (XT1955-5):
+        sed -i \
+            -e 's block/bootdevice/by-name/DDR mmcblk0p25 ' \
+            -e 's block/bootdevice/by-name/aboot mmcblk0p9 ' \
+            -e 's block/bootdevice/by-name/apdp mmcblk0p49 ' \
+            -e 's block/bootdevice/by-name/boot mmcblk0p41 ' \
+            -e 's block/bootdevice/by-name/carrier mmcblk0p38 ' \
+            -e 's block/bootdevice/by-name/cid mmcblk0p35 ' \
+            -e 's block/bootdevice/by-name/cmnlib64 mmcblk0p13 ' \
+            -e 's block/bootdevice/by-name/cmnlib mmcblk0p11 ' \
+            -e 's block/bootdevice/by-name/devcfg mmcblk0p7 ' \
+            -e 's block/bootdevice/by-name/devinfo mmcblk0p52 ' \
+            -e 's block/bootdevice/by-name/dpo mmcblk0p51 ' \
+            -e 's block/bootdevice/by-name/dsp mmcblk0p24 ' \
+            -e 's block/bootdevice/by-name/dtbo mmcblk0p43 ' \
+            -e 's block/bootdevice/by-name/frp mmcblk0p34 ' \
+            -e 's block/bootdevice/by-name/fsc mmcblk0p21 ' \
+            -e 's block/bootdevice/by-name/fsg mmcblk0p30 ' \
+            -e 's block/bootdevice/by-name/hw mmcblk0p56 ' \
+            -e 's block/bootdevice/by-name/keymaster mmcblk0p15 ' \
+            -e 's block/bootdevice/by-name/kpan mmcblk0p40 ' \
+            -e 's block/bootdevice/by-name/logo mmcblk0p36 ' \
+            -e 's block/bootdevice/by-name/logs mmcblk0p48 ' \
+            -e 's block/bootdevice/by-name/metadata mmcblk0p39 ' \
+            -e 's block/bootdevice/by-name/misc mmcblk0p45 ' \
+            -e 's block/bootdevice/by-name/modem mmcblk0p19 ' \
+            -e 's block/bootdevice/by-name/modemst1 mmcblk0p28 ' \
+            -e 's block/bootdevice/by-name/modemst2 mmcblk0p29 ' \
+            -e 's block/bootdevice/by-name/mota mmcblk0p46 ' \
+            -e 's block/bootdevice/by-name/msadp mmcblk0p50 ' \
+            -e 's block/bootdevice/by-name/oem mmcblk0p58 ' \
+            -e 's block/bootdevice/by-name/padA mmcblk0p55 ' \
+            -e 's block/bootdevice/by-name/persist mmcblk0p32 ' \
+            -e 's block/bootdevice/by-name/persist2 mmcblk0p33 ' \
+            -e 's block/bootdevice/by-name/prov mmcblk0p17 ' \
+            -e 's block/bootdevice/by-name/rpm mmcblk0p3 ' \
+            -e 's block/bootdevice/by-name/sbl1 mmcblk0p1 ' \
+            -e 's block/bootdevice/by-name/sp mmcblk0p57 ' \
+            -e 's block/bootdevice/by-name/ssd mmcblk0p22 ' \
+            -e 's block/bootdevice/by-name/syscfg mmcblk0p47 ' \
+            -e 's block/bootdevice/by-name/system mmcblk0p62 ' \
+            -e 's block/bootdevice/by-name/tz mmcblk0p5 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk0p64 ' \
+            -e 's block/bootdevice/by-name/utags mmcblk0p26 ' \
+            -e 's block/bootdevice/by-name/utagsBackup mmcblk0p27 ' \
+            -e 's block/bootdevice/by-name/vbmeta mmcblk0p53 ' \
+            -e 's block/bootdevice/by-name/vendor mmcblk0p60 ' \
+            "$@"
+        ;;
+
     "griffin")
         sed -i \
             -e 's block/bootdevice/by-name/aboot sdb12 ' \
