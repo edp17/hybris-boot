@@ -921,8 +921,8 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/msadp mmcblk0p50 ' \
             -e 's block/bootdevice/by-name/oem mmcblk0p58 ' \
             -e 's block/bootdevice/by-name/padA mmcblk0p55 ' \
-            -e 's block/bootdevice/by-name/persist mmcblk0p32 ' \
             -e 's block/bootdevice/by-name/persist2 mmcblk0p33 ' \
+            -e 's block/bootdevice/by-name/persist mmcblk0p32 ' \
             -e 's block/bootdevice/by-name/prov mmcblk0p17 ' \
             -e 's block/bootdevice/by-name/rpm mmcblk0p3 ' \
             -e 's block/bootdevice/by-name/sbl1 mmcblk0p1 ' \
